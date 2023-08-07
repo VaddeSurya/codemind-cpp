@@ -1,18 +1,20 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main() {
-    int n;
+int main()
+{
+    int arr[100],n,i,odd=0;
     cin>>n;
-    int arr[n];
-    for (int i = 0; i < n; ++i) {
+    for(i=0;i<n;i++)
+    {
         cin>>arr[i];
     }
-
-    int even = 0;
-
-    for (int i = 1; i < n; i += 2) {
-        even += arr[i];
+    for(i=0;i<n;i++)
+    {
+    if(i%2!=0)
+    {
+        odd+=arr[i];
     }
-    cout<<even;
-    return 0;
+    }
+    cout<<odd;
+    
 }
