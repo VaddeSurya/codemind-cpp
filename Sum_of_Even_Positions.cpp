@@ -1,21 +1,16 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
-
-int main() {
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; ++i) {
-        cin >> arr[i];
+int main()
+{
+    int n,arr[100],i,sum=0;
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        if(i%2==0)
+        {
+            sum+=arr[i];
+        }
     }
-    int even = 0;
-
-    for (int i = 0; i < n; i += 2) {
-        even += arr[i];
-    }
-
-    cout << even << endl;
-
-    return 0;
+    cout<<sum;
 }
